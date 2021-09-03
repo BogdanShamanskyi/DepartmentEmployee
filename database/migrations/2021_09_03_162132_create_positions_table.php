@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEmployeePositionsTable extends Migration
+class CreatePositionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEmployeePositionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('employee_positions', function (Blueprint $table) {
+        Schema::create('positions', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
