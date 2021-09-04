@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Department;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 
 class DepartmentSeeder extends Seeder
 {
@@ -15,20 +14,6 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {
-        $departments = [
-            'Marketing',
-            'Operations',
-            'Finance',
-            'Sales',
-            'Purchase',
-            'Human Resource',
-        ];
-
-        foreach ($departments as $department) {
-            Department::create([
-                'name' => $department,
-                'slug' => Str::slug($department)
-            ]);
-        }
+        Department::factory()->count(10)->create();
     }
 }
