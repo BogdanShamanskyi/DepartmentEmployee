@@ -22,6 +22,8 @@ class CreateEmployeesTable extends Migration
             $table->unsignedInteger('salary_id');
 
             $table->timestamps();
+
+            $table->foreign('position_id')->on('positions')->references('id');
         });
     }
 
